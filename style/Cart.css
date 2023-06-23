@@ -1,0 +1,88 @@
+.cart {
+    /* display: flex; */
+  width: auto;
+  height: auto;
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.cart h1 {
+  justify-content: center;
+  display: flex;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+}
+.cartItem {
+  /* align-items: center; */
+  border-radius: 15px;
+  width: auto; 
+  height: auto;
+  margin: 30px;
+  /* padding-bottom: -10px; */
+  margin-bottom: 50px;
+  box-shadow: 2px 2px 5px rgba(8, 33, 44, 0.2);
+  border-style: groove;
+  /* background-color: rgb(229, 241, 245); */
+  /* padding-bottom: 70px; */
+}
+
+/* item name */
+.cartItem h2 {
+  margin-left: 100px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* item price */
+.cartItem h3 {
+    font-size: 20px;;
+  margin: -50px 350px;
+  font-weight: 500;
+}
+
+/* quantity */
+.cartItem p {
+    font-size: 17px;
+  margin: 25px 550px;
+  font-weight: 500;
+font-style: oblique;
+}
+
+/* total price */
+.cartItem div {
+  display: flex;
+  justify-content: flex;
+  margin: -45px 750px;
+  font-weight: 600;
+  font-size: 20px;
+}
+.cartItem .buttonAdjust {
+  margin: 25px 950px;
+}
+
+.buttonAdjust span{
+    margin: 0 20px;
+}
+.cartItem button {
+  display: flex;
+  justify-content: flex;
+  margin: 0px 50px;
+}
+.cartItem .delete {
+  margin: 0px 100px;
+  cursor: pointer;
+  color: rgb(45, 45, 44);
+}
+
+.finalPrice{
+    margin: 0 600px;
+    font-size: 25px;
+    font-weight: 600;
+    justify-content: center;
+    display: flex;
+    border-radius: 15px;
+  width: 300px;
+  height: auto;
+  box-shadow: 2px 2px 5px rgba(8, 33, 44, 0.2);
+  border-style: groove;
+  padding: 20px 10px;
+}

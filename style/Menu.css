@@ -1,0 +1,111 @@
+.menu {
+  /* background-position: ; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.menuTitle {
+  justify-content: center;
+  display: flex;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+}
+
+.menuList {
+  /* justify-content: right; */
+  width: 80vw;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+}
+
+.menuItem {
+  border-radius: 15px;
+  width: auto;
+  height: auto;
+  /* margin-left: -70px; */
+  margin: 20px;
+  /* padding-bottom: -10px; */
+  margin-bottom: 50px;
+  box-shadow: 2px 2px 5px rgba(8, 33, 44, 0.2);
+  border-style: groove;
+  /* background-color: rgb(229, 241, 245); */
+}
+
+.menuItem div {
+  /* margin: -22px 0px; */
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.menuItem h1 {
+  margin-left: 220px;
+  width: auto;
+}
+.menuItem p {
+  margin-left: 220px;
+}
+
+.quantityControls {
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
+  margin: 0 200px;
+}
+
+.quantityControls .increase,
+.quantityControls .decrease {
+  /* margin: 0px 20px; */
+  margin-left: 10px;
+  width: 30px;
+  border-style: groove;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.quantityControls .buyButton {
+  /* margin: -50px 200px; */
+  /* padding-bottom: 5px; */
+  width: 150px;
+  height: 30px;
+  margin-left: -240px;
+  border-style: hidden;
+  border-radius: 8px;
+  box-shadow: 2px 2px 1px rgba(8, 33, 44, 0.2);
+  background-color: rgb(248, 216, 149);
+  cursor: pointer;
+}
+.quantityControls .buyButton:hover {
+  background-color: rgb(250, 198, 86);
+  transform: translateY(1px);
+}
+.quantityControls .buyButton.clicked {
+  color: black;
+}
+
+.addCart {
+  width: 250px;
+  height: 50px;
+  margin: 10px 550px;
+  border-style: hidden;
+  border-radius: 8px;
+  box-shadow: 2px 2px 1px rgba(8, 33, 44, 0.2);
+  background-color: rgb(243, 223, 180);
+  cursor: pointer;
+}
+.addCart:hover {
+  background-color: rgb(255, 212, 120);
+  box-shadow: 0 5px rgb(225, 221, 214);
+  transform: translateY(1px);
+}
