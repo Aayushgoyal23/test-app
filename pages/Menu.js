@@ -6,6 +6,12 @@ import Food3 from "../assets/pastamenu.png"
 import Food4 from "../assets/icecreammenu.png"
 import Food5 from "../assets/noodlesmenu.png"
 import Food6 from "../assets/softdrinkmenu.png"
+import Food7 from "../assets/spicyfries.png"
+import Food8 from "../assets/shake.png"
+import Food9 from "../assets/honeyfries.jpg"
+import Food10 from "../assets/springroll.png"
+import Food11 from "../assets/pudding.png"
+import Food12 from "../assets/chillipaneer.png"
 import MenuBG from "../assets/menubg.png"
 import "../style/Menu.css";
 import { Link } from "react-router-dom";
@@ -47,12 +53,50 @@ const MenuList = [
         price: 180,
         quantity: 1
     },
+    {
+        name: "Spicy Fries",
+        image: Food7,
+        price: 150,
+        quantity: 1,
+    },
+    {
+        name: "Shake",
+        image: Food8,
+        price: 180,
+        quantity: 1,
+    },
+    {
+        name: "Honey fries",
+        image: Food9,
+        price: 80,
+        quantity: 1,
+    },
+    {
+        name: "Spring roll",
+        image: Food10,
+        price: 90,
+        quantity: 1,
+    },
+    {
+        name: "Pudding",
+        image: Food11,
+        price: 130,
+        quantity: 1,
+    },
+    {
+        name: "Chili Paneer",
+        image: Food12,
+        price: 200,
+        quantity: 1,
+    }
 ];
 
 const Menu = () => {
     const [menuItems, setMenuItems] = useState(MenuList);
     const [updatedDetails, setUpdatedDetails] = useState(null);
     const [addedToCartIndex, setAddedToCartIndex] = useState(null);
+    const [searchQuery, setSearchQuery] = useState("");
+    const [filteredMenuItems, setFilteredMenuItems] = useState(MenuList);
 
     // const [addCartIndex, setaddCartIndex] = useState(null);
 
@@ -87,11 +131,27 @@ const Menu = () => {
         console.log(updatedDetails, "buynow");
     };
 
+    const handleSearchInputChange = (event) => {
+        const query = event.target.value.toLowerCase();
+        setSearchQuery(query);
+
+        const filteredItems = MenuList.filter((item) => item.name.toLowerCase().includes(query));
+        setFilteredMenuItems(filteredItems);
+    };
+
     return (
         <div className="menu" style={{ backgroundImage: `url(${MenuBG})` }}>
             <h2 className="menuTitle">Our Menu Items</h2>
+            <input
+                className="searchMenuItem"
+                type="text"
+                placeholder="Search..."
+                value={searchQuery}
+                onChange={handleSearchInputChange}
+            />
+
             <div className="menuList">
-                {menuItems.map((item, index) => {
+                {filteredMenuItems.map((item, index) => {
                     const totalPrice = item.price * item.quantity;
                     const isAddedToCart = addedToCartIndex === index;
 
@@ -122,6 +182,7 @@ const Menu = () => {
                                 >
                                     {isAddedToCart ? "Added to Cart" : "Buy Now"}
                                 </button>
+
                             </div>
                         </div>
                     );

@@ -109,3 +109,28 @@
   box-shadow: 0 5px rgb(225, 221, 214);
   transform: translateY(1px);
 }
+
+.searchMenuItem{
+  margin: 20px 600px;
+  width: 300px;
+  height: 30px;
+  border-radius: 10px;
+  border-style: hidden;
+  border-bottom: 1px solid #121619;
+  background-color: transparent;
+  box-shadow: 2px -2px 5px rgba(8, 33, 44, 0.2);
+
+/* border: none; */
+  /* padding-bottom: 10px; */
+}
+
+.searchMenuItem:focus {
+  outline: none;
+}
+
+.searchMenuItem::placeholder {
+  /* align-items: center; */
+  font-weight: bold;
+  color: rgb(30, 30, 28);
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+}
